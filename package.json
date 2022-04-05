@@ -1,5 +1,5 @@
 {
-  "name": "temporaryFiles",
+  "name": "thingy-network-base",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -12,12 +12,12 @@
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "git+https://.git"
+    "url": "git+https://github.com/JhonnyJason/thingy-network-base.git"
   },
   "bugs": {
-    "url": "https://"
+    "url": "https://github.com/JhonnyJason/thingy-network-base/issues"
   },
-  "homepage": "https://",
+  "homepage": "https://github.com/JhonnyJason/thingy-network-base-output#readme",
   "dependencies": {
     "node-fetch": "^3.2.3"
   },
