@@ -13,7 +13,7 @@ export var postData = async function(url, data) {
   try {
     response = (await fetch(url, options));
     if (!response.ok) {
-      throw new Error(`Response not ok - status: ${response.status}! body: ${response.body}`);
+      throw new Error(`Response not ok - status: ${response.status}! body: ${(await response.text())}`);
     }
     return response.json();
   } catch (error) {
@@ -28,7 +28,7 @@ export var getData = async function(url) {
   try {
     response = (await fetch(url));
     if (!response.ok) {
-      throw new Error(`Response not ok - status: ${response.status}! body: ${response.body}`);
+      throw new Error(`Response not ok - status: ${response.status}! body: ${(await response.text())}`);
     }
     return response.json();
   } catch (error) {
@@ -43,7 +43,7 @@ export var getAsset = async function(url) {
   try {
     response = (await fetch(url));
     if (!response.ok) {
-      throw new Error(`Response not ok - status: ${response.status}! body: ${response.body}`);
+      throw new Error(`Response not ok - status: ${response.status}! body: ${(await response.text())}`);
     }
     return URL.createObjectURL((await response.blob()));
   } catch (error) {
@@ -58,7 +58,7 @@ export var getText = async function(url) {
   try {
     response = (await fetch(url));
     if (!response.ok) {
-      throw new Error(`Response not ok - status: ${response.status}! body: ${response.body}`);
+      throw new Error(`Response not ok - status: ${response.status}! body: ${(await response.text())}`);
     }
     return (await response.text());
   } catch (error) {
